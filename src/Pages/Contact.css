@@ -1,0 +1,120 @@
+/* Contact.css */
+:root {
+    --dark-heading: #333;
+    --light-heading: #f4f4f4;
+    --gradient-start: #ff6b6b;
+    --gradient-end: #4ecdc4;
+    --content-text: #666;
+  }
+  
+  .contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 80px);
+    text-align: center;
+  }
+  
+  .contact-heading {
+    font-size: 2rem;
+    color: var(--dark-heading);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    animation: fadeInDown 0.8s ease-out;
+  }
+  
+  .contact-email,
+  .contact-phone {
+    font-size: 3rem;
+    font-weight: 600;
+    background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    margin: 1rem 0;
+    transition: transform 0.3s ease;
+  }
+  
+  .contact-email a,
+  .contact-phone a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .contact-email:hover,
+  .contact-phone:hover {
+    transform: scale(1.05);
+  }
+  
+  .contact-or {
+    font-size: 1.25rem;
+    color: var(--content-text);
+    margin: 1rem 0;
+    animation: fadeIn 0.8s ease-out;
+  }
+  
+  /* Animations */
+  @keyframes fadeInDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .contact-heading {
+      font-size: 1.5rem;
+    }
+  
+    .contact-email,
+    .contact-phone {
+      font-size: 2rem;
+    }
+  
+    .contact-or {
+      font-size: 1rem;
+    }
+  }
+  
+  /* Dark Mode Support */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --dark-heading: #f4f4f4;
+      --light-heading: #333;
+      --content-text: #ccc;
+    }
+  
+    .contact-heading {
+      color: var(--light-heading);
+    }
+  }
+  
+  /* Interaction States */
+  .contact-email a:focus,
+  .contact-phone a:focus {
+    outline: 2px solid var(--gradient-start);
+    outline-offset: 4px;
+  }
+  
+  .contact-email a:active,
+  .contact-phone a:active {
+    transform: scale(0.95);
+  }

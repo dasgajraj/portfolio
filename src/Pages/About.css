@@ -1,0 +1,89 @@
+/* About.css */
+:root {
+    --dark-heading: #333;
+    --light-heading: #f4f4f4;
+    --content-text: #666;
+    --background: #fff;
+    --section-padding: 2rem;
+  }
+  
+  .about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--section-padding);
+  }
+  
+  .about-section,
+  .work-section,
+  .education-section {
+    margin-bottom: 3rem;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+    color: var(--dark-heading);
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    margin-top: 5rem;
+    line-height: 1.2;
+    animation: fadeInDown 0.8s ease-out;
+    
+  }
+  
+  .about-description {
+    font-size: 1rem;
+    color: var(--content-text);
+    line-height: 1.6;
+    max-width: 800px;
+    animation: fadeIn 0.8s ease-out;
+    padding: 1rem 0;
+  }
+  
+  /* Animations */
+  @keyframes fadeInDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  /* Dark Mode Support */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --dark-heading: #f4f4f4;
+      --light-heading: #333;
+      --content-text: #ccc;
+      --background: #121212;
+    }
+  
+    .about-container {
+      background-color: var(--background);
+      color: var(--light-heading);
+    }
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .section-title {
+      font-size: 2rem;
+    }
+  
+    .about-description {
+      font-size: 0.9rem;
+    }
+  }
+  
+  

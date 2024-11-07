@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap');
+
+.footer {
+  background-color: #000000;
+  padding: 1% 0%;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-content {
+  max-width: 1200px;
+  padding: 0 2rem;
+}
+
+.footer-text {
+  text-align: center;
+  color: #ffffff;
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+.footer-link {
+  color: #0284c7;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  color: #0369a1;
+}
+
+.text-gradient {
+  background-image: linear-gradient(to right, #0284c7, #8b5cf6, #ec4899);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: 500;
+}

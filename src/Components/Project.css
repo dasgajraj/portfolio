@@ -1,0 +1,117 @@
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .project-card {
+    margin: 1rem;
+    width: 70vw;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .project-image {
+    width: 100%;
+    height: auto;
+    max-height: 200px; /* Adjust this to your desired maximum height */
+    object-fit: cover;
+  }
+  
+  .project-content {
+    padding: 1rem;
+    background-color: #ffffff;
+  }
+  
+  .project-title {
+    font-weight: 600;
+    font-size: 1.125rem;
+    padding-top: 0.25rem;
+    color: #333333;
+  }
+  
+  .project-description {
+    padding-top: 1rem;
+    font-weight: 300;
+    color: #666666;
+  }
+  
+  .tech-stack {
+    padding-top: 1rem;
+    font-weight: 500;
+    color: #333333;
+  }
+  
+  .tech-stack span {
+    font-weight: 300;
+  }
+  
+  .project-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.25rem;
+  }
+  
+  .link-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .link-icon {
+    stroke: #333333;
+    min-width: fit-content;
+  }
+  
+  .github-icon {
+    fill: #333333;
+  }
+  
+  .link-text {
+    text-decoration: underline;
+    padding-left: 0.5rem;
+    font-weight: 300;
+    color: #333333;
+  }
+  
+  /* Dark mode styles */
+  @media (prefers-color-scheme: dark) {
+    .project-content {
+      background-color: #1a1a1a;
+    }
+  
+    .project-title,
+    .tech-stack {
+      color: #ffffff;
+    }
+  
+    .project-description {
+      color: #cccccc;
+    }
+  
+    .link-icon {
+      stroke: #ffffff;
+    }
+  
+    .github-icon {
+      fill: #ffffff;
+    }
+  
+    .link-text {
+      color: #ffffff;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .project-card {
+      width: 100%;
+      margin: 1rem 0;
+    }
+  }

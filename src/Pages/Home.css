@@ -1,0 +1,280 @@
+/* Home.css */
+:root {
+    --dark-heading: #333;
+    --light-heading: #f4f4f4;
+    --gradient-start: #ff6b6b;
+    --gradient-end: #4ecdc4;
+}
+
+.home-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+    min-height: calc(100vh - 80px); /* Adjust based on your nav height */
+    padding-top: 80px; /* Match nav height */
+}
+
+/* Animations */
+@keyframes slideInFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@media (min-width: 768px) {
+    .home-container {
+        flex-direction: row;
+    }
+}
+
+.home-text {
+    text-align: center;
+    margin-bottom: 2rem;
+    animation: slideInFromLeft 1s ease-out;
+}
+
+@media (min-width: 768px) {
+    .home-text {
+        text-align: left;
+        margin-bottom: 0;
+    }
+}
+
+.home-greeting {
+    font-size: 1.5rem;
+    color: var(--dark-heading);
+    margin-bottom: 1rem;
+    animation: slideInFromLeft 1s ease-out;
+    animation-delay: 0.2s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+@media (min-width: 768px) {
+    .home-greeting {
+        font-size: 2.5rem;
+    }
+}
+
+.home-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-bottom: 1rem;
+    animation: slideInFromLeft 1s ease-out;
+    animation-delay: 0.4s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+@media (min-width: 768px) {
+    .home-name {
+        font-size: 2.5rem;
+    }
+}
+
+.home-tagline {
+    font-size: 1.5rem;
+    color: var(--dark-heading);
+    animation: slideInFromLeft 1s ease-out;
+    animation-delay: 0.6s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+@media (min-width: 768px) {
+    .home-tagline {
+        font-size: 2.5rem;
+    }
+}
+
+.home-image-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    animation: slideInFromRight 1s ease-out;
+}
+
+@media (min-width: 768px) {
+    .home-image-container {
+        margin-top: 0;
+    }
+}
+
+.home-image {
+    width: 50%;
+    max-width: 300px;
+    border-radius: 50%;
+    animation: fadeIn 1s ease-out;
+    animation-delay: 0.8s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+@media (min-width: 768px) {
+    .home-image {
+        margin-left: auto;
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .home-greeting,
+    .home-tagline {
+        color: var(--light-heading);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .home-container {
+        padding-top: 60px; /* Adjust for mobile nav height */
+        min-height: calc(100vh - 60px);
+    }
+}/* Home.css */
+:root {
+    --dark-heading: #333;
+    --light-heading: #f4f4f4;
+    --gradient-start: #ff6b6b;
+    --gradient-end: #4ecdc4;
+}
+
+.home-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+    height: 100vh;
+    padding-top: 80px;
+}
+
+/* Animations */
+@keyframes slideInFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.home-text {
+    text-align: left;
+    width: 60%;
+}
+
+.home-greeting {
+    font-size: 2.5rem;
+    color: var(--dark-heading);
+    margin-bottom: 1rem;
+    animation: slideInFromLeft 1s ease-out;
+    animation-delay: 0.2s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+.home-name {
+    font-size: 3rem;
+    font-weight: bold;
+    background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-bottom: 1rem;
+    animation: slideInFromLeft 1s ease-out;
+    animation-delay: 0.4s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+.home-tagline {
+    font-size: 2.5rem;
+    color: var(--dark-heading);
+    animation: slideInFromLeft 1s ease-out;
+    animation-delay: 0.6s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+.home-image-container {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+}
+
+.home-image {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    animation: slideInFromRight 1s ease-out;
+    animation-delay: 0.8s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .home-greeting,
+    .home-tagline {
+        color: var(--light-heading);
+    }
+}
