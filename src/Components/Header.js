@@ -6,7 +6,7 @@ function Header() {
   return (
     <header className="header">
       <div className="header-content">
-        <Link to="/https://www.linkedin.com/in/das-gajraj-sharma-647818299/" className="logo">
+        <Link to="https://www.linkedin.com/in/das-gajraj-sharma-647818299/" className="logo">
           Linked in
         </Link>
         <nav className="nav-menu">
